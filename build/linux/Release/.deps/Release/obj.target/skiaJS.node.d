@@ -1,0 +1,1 @@
+cmd_Release/obj.target/skiaJS.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=skiaJS.node -o Release/obj.target/skiaJS.node -Wl,--start-group Release/obj.target/skiaJS/generated/index.o -Wl,--end-group -Wl,-rpath='$${ORIGIN}/../../../libs/linux' /home/artem/skiaJS/libs/linux/libSkiaSharp.so
