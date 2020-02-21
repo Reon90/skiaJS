@@ -2,6 +2,9 @@
 
 The N-API bindings for [Skia Graphics Library](https://skia.org/) 2D graphics library which provides common APIs that work across a variety of hardware and software platforms. It serves as the graphics engine for Google Chrome and Chrome OS, Android, Mozilla Firefox and Firefox OS, and many other products.
 
+## Platforms
+Mac OS, Linux
+
 ## Example
 ```js
 // Rect
@@ -34,4 +37,3 @@ const svg = "m451.111 451.111h-451.111v-451.111h451.111zm-386.667-64.444h322.222
 skPathParseSvgString(path, svg);
 skCanvasDrawPath(canvas, path, stroke);
 ```
-![Skia examples](https://octodex.github.com/images/yaktocat.png)
