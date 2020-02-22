@@ -23,7 +23,7 @@
           "OS=='win'",
           {
           	"libraries": [
-          		"<(skia)/win32/libSkiaSharp.dll",
+          		"<(skia)/win32/libSkiaSharp.lib",
           	]
           }
         ],
