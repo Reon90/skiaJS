@@ -16,7 +16,7 @@ const rect = new skRect({
     right: 200,
     bottom: 200
 });
-skCanvasDrawRect(canvas, rect.buffer, fill);
+skCanvasDrawRect(canvas, rect, fill);
 
 // Text
 const familyName = "Times New Roman";
