@@ -10,9 +10,12 @@ Mac OS, Linux, Windows
 // Rect
 const fill = skPaintNew();
 skPaintSetColor(fill, skColorSetArgb(0xFF, 0xFF, 0x00, 0xFF));
-const rect = new Float32Array([
-    100, 100, 200, 200
-]);
+const rect = new skRect({
+    left: 100,
+    top: 100,
+    right: 200,
+    bottom: 200
+});
 skCanvasDrawRect(canvas, rect.buffer, fill);
 
 // Text

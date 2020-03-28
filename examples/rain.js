@@ -98,13 +98,13 @@ function draw(){
     dots[i] += dotsVel[i] += accelleration;
     
     skPaintSetColor(fill, skColorSetArgb(0xFF, colors[i], 255-colors[i], 255));
-    const rect = new Float32Array([
-        occupation * i,
-        currentY,
-        occupation * i + size,
-        currentY + dotsVel[i] + 1
-    ]);
-    skCanvasDrawRect(canvas, rect.buffer, fill);
+    const rect = new skRect({
+        left: occupation * i,
+        top: currentY,
+        right: occupation * i + size,
+        bottom: currentY + dotsVel[i] + 1
+    });
+    skCanvasDrawRect(canvas, rect, fill);
     
     if(dots[i] > h && Math.random() < .01){
       dots[i] = dotsVel[i] = 0;
@@ -121,7 +121,7 @@ function drawLoop() {
     if (!glfwWindowShouldClose(window)) {
         setTimeout(() => {
             const t = performance.now();
-            if (t - t0 > 1.0 || frames === 0) {
+            if (t - t0 > 1000.0 || frames === 0) {
                 const fps = Math.floor((frames / (t - t0)) * 1e3);
                 glfwSetWindowTitle(window, `FPS: ${fps}`);
                 t0 = t;

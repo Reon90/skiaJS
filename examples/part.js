@@ -202,7 +202,7 @@ function drawLoop() {
     if (!glfwWindowShouldClose(window)) {
         setTimeout(() => {
             const t = performance.now();
-            if (t - t0 > 1.0 || frames === 0) {
+            if (t - t0 > 1000.0 || frames === 0) {
                 const fps = Math.floor((frames / (t - t0)) * 1e3);
                 glfwSetWindowTitle(window, `FPS: ${fps}`);
                 t0 = t;
